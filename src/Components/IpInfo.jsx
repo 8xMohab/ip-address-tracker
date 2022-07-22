@@ -6,7 +6,7 @@ function IpInfo() {
     <div className="ip-info">
       <div className="ip-address">
         <p>IP Address</p>
-        <h2>{ipInfo.query}</h2>
+        <h2>{ipInfo.ip}</h2>
       </div>
       <div className="ip-location">
         <p>Location</p>
@@ -18,7 +18,7 @@ function IpInfo() {
       </div>
       <div className="ip-isp">
         <p>ISP</p>
-        <h2>{ipInfo.isp}</h2>
+        <h2>{ipInfo.hostname}</h2>
       </div>
     </div>
   );

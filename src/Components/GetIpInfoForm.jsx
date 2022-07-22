@@ -4,7 +4,8 @@ import { ipInfoContext } from "../App";
 function GetIpInfoForm() {
   const { setIpInfo } = useContext(ipInfoContext);
   const [input, setinput] = useState("");
-  const httpReq = `http://ip-api.com/json/${input}`;
+  const API_KEY = process.env.REACT_APP_API_KEY;
+  const httpReq = `https://ipinfo.io/${input}?token=${API_KEY}`;
   const submitHandler = (e) => {
     e.preventDefault();
     getIpInfo();

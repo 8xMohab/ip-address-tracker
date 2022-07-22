@@ -6,21 +6,22 @@ import { Icon } from "leaflet";
 import { ipInfoContext } from "../App";
 function GetMap() {
   const { ipInfo } = useContext(ipInfoContext);
+  let location = ipInfo.loc.split(",");
   function MyComponent() {
     const map = useMap();
-    map.setView([ipInfo.lat, ipInfo.lon], 10);
+    map.setView([location[0], location[1]], 10);
     return null;
   }
   return (
     <div className="map-view">
-      <MapContainer center={[ipInfo.lat, ipInfo.lon]} zoom={10}>
+      <MapContainer center={[location[0], location[1]]} zoom={10}>
         <MyComponent />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker
-          position={[ipInfo.lat, ipInfo.lon]}
+          position={[location[0], location[1]]}
           icon={
             new Icon({
               iconUrl: markerIcon,
