@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.App header {
+  background-image: url("../Images/pattern-bg.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-bottom: 160px;
+}
+.App header h1 {
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.App header .search-bar form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.App header .search-bar form input {
+  width: 300px;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+}
+@media screen and (min-width: 992px) {
+  .App header .search-bar form input {
+    width: 500px;
+  }
+}
+.App header .search-bar form ::-webkit-input-placeholder {
+  font-size: 16px;
+}
+.App header .search-bar form ::-moz-placeholder {
+  font-size: 16px;
+}
+.App header .search-bar form :-ms-input-placeholder {
+  font-size: 16px;
+}
+.App header .search-bar form ::-ms-input-placeholder {
+  font-size: 16px;
+}
+.App header .search-bar form ::placeholder {
+  font-size: 16px;
+}
+.App header .search-bar form button {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  background-color: black;
+  color: white;
+}
+.App header .ip-info {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  top: 315px;
+  width: 350px;
+  text-align: center;
+  z-index: 1;
+}
+.App header .ip-info p {
+  margin-bottom: 5px;
+}
+.App header .ip-info h2 {
+  margin-bottom: 10px;
+}
+.App header .ip-info h2:empty::after {
+  content: "";
+  display: inline-block;
+}
+@media screen and (min-width: 1190px) {
+  .App header .ip-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    text-align: left;
+    top: 250px;
+  }
+  .App header .ip-info div {
+    padding-right: 80px;
+    position: relative;
+  }
+  .App header .ip-info div::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: hsl(0deg, 0%, 59%);
+    right: 40px;
+    top: 0;
+  }
+  .App header .ip-info div:nth-child(4)::after {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .App header {
+    padding-bottom: 100px;
+  }
+}
+.App .map-view {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0deg, 0%, 59%);
+}
+.leaflet-container {
+  height: 100%;
+}
